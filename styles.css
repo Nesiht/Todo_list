@@ -11,11 +11,12 @@ body{
     --main-bg-color: rgba(159, 223, 191, 0.5);
 }
 
-.add-items {
+.add-items, .show-items {
     margin: 10% auto;
     padding: 10px;
     width: 500px;
     background-color: var(--main-bg-color);
+    font-family: 'Open Sans', sans-serif;
 }
 
 input[type=text], [type=submit]{
@@ -27,8 +28,6 @@ input[type=text], [type=submit]{
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
-
-
 
 .test {
     margin: 15% auto;
