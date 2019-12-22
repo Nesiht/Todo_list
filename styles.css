@@ -14,6 +14,7 @@ body{
 :root {
     --main-bg-color: rgba(91, 175, 200, 0.69);
     --second-bg-color: rgba(100, 233, 123, 0.7);
+    --border-radius: 10px;
 }
 
 .add-items, .show-items {
@@ -50,6 +51,16 @@ li {
     padding: 12px 16px 12px 16px;
 }
 
+li:first-child{
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+li:last-child{
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
 li:nth-child(2n){
     background-color: var(--second-bg-color);
 }
@@ -64,6 +75,6 @@ li:nth-child(2n){
   }
   
   .close:hover {
-    background-color: #f44336;
+    background-color: rgba(40, 60, 90, 0.69);
     color: white;
   }
