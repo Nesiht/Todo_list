@@ -1,8 +1,9 @@
 // Global Lists
-let items = ['hello', 'securitas', 'nokas'];
+let items = ['Learn HTML', 'Learn CSS', 'Learn Javascript', 'Take over the world'];
 
 // Global Variables
 const textField = document.getElementById("text-item");
+const close = document.getElementsByClassName("close");
 
 // Error list
 const A100 = "ERROR A100: Input field empty";
@@ -25,6 +26,13 @@ addItem = () => {
         markUp.appendChild(span);
         span.className = "close";
         span.appendChild(txt);
+        // Hide item when close is clicked
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function() {
+              let div = this.parentElement;
+              div.style.display = "none";
+            }
+          }
     }
     else {
         console.log(A100);
@@ -39,9 +47,6 @@ textField.addEventListener('keyup', function(event) {
       }
 });
 
-// Delete items in the array
-
-
 // List all items in the array
 for (i = 0; i < items.length; ++i) {
     const markUp = document.createElement("li");
@@ -54,3 +59,11 @@ for (i = 0; i < items.length; ++i) {
     span.className = "close";
     span.appendChild(txt);   
 };
+
+// Hide item when close is clicked
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    let div = this.parentElement;
+    div.style.display = "none";
+  }
+}
